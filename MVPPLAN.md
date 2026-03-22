@@ -16,21 +16,25 @@ Deliver one polished landing page MVP: strong hero, fleet brands, benefits, comp
   - **Surfaces:** `surface` **#FCF9F8**, `surface-container-low`, `surface-container-highest`, etc.
   - **Ink:** `on-surface` **#1C1B1B**, **supporting text** `on-surface-variant` **#4A4732**.
   - **Accent (icons / small UI):** `primary` **#686000**.
-- **MVP brand aliases** (optional): `beely-primary`, `beely-secondary`, `beely-support` kept for compatibility with earlier tokens.
-- **Chrome:** Glass header (`backdrop-blur`), rounded-xl CTAs, large hero imagery, dark **“Why Beely?”** comparison band.
+- **MVP brand aliases** (optional): `beely-primary`, `beely-secondary`, `beely-support` (**#222222**) kept for compatibility with earlier tokens.
+- **Chrome:** **Glass header** (`.glass-nav` — **more transparent** white ~55% + stronger blur): logo + nav + primary **Browse Cars** (yellow button). **No search field.** Responsive padding (`px-4` → `lg:px-8`, `py-3` / `py-3.5`, `min-h` for consistent bar height). Rounded-xl CTAs, large hero imagery.
+- **Page canvas:** **Black** (`#000000`) behind the main flow; sections that use dark text on light UI use an explicit **`surface`** (or related container) background so copy stays readable.
+- **Dark bands:** **Our Fleet Brands** and **How it works** (“From online to driveway…”) use **`bg-black`** with **light text**, **yellow** accents (`primary-container`), and translucent cards where needed for contrast.
+- **Light closing CTA:** **“Ready to find your car?”** sits on **`surface`** (same family as **Customize your ride** / add-ons): light card, **`text-on-surface`** / **`text-on-surface-variant`**, yellow primary button.
+- **Footer:** Background **`#222222`** (`beely-support`), light text, subtle borders (`white/10`), newsletter field on a translucent dark treatment; primary-yellow **Join** button.
 
 ## Page structure (top → bottom)
 
-1. **Header (fixed):** Logo “Beely”, nav (Cars, How it Works, Support), optional search field, **Browse Cars** CTA, **MyBeely** account affordance.
+1. **Header (fixed):** Glass bar, logo “Beely”, nav (Cars, How it Works, Support), **Browse Cars** CTA, **MyBeely** — **no search**.
 2. **Hero:** Headline with highlighted word “fixed”, supporting line about maintenance & short contracts, primary + secondary CTAs, hero car image (Stitch asset URL).
-3. **Fleet brands:** “Our Fleet Brands” + link “Browse 30+ Brands”; grid of **uppercase wordmark** cards (grayscale → colour on hover)—placeholder style, not official logos.
-4. **Key benefits (3 cards):** Fixed monthly payment, Maintenance included, Short contracts—with Material icons.
-5. **Comparison:** Dark section, **feature table**: Beely vs Traditional leasing vs Ownership (duration, maintenance, down payment, paperwork).
+3. **Fleet brands:** **Black** section — “Our Fleet Brands” + “Browse 30+ Brands” (yellow link); **uppercase wordmark** cards on translucent panels (readable on dark).
+4. **Comparison (“Why Beely?”):** Dark section, **feature table**: Beely vs Traditional leasing vs Ownership (duration, maintenance, down payment, paperwork).
+5. **Key benefits (3 cards):** Fixed monthly payment, Maintenance included, Short contracts—with Material icons.
 6. **Included services:** “No hidden costs. Ever.” — 5 icon tiles (servicing, repairs, inspections, seasonal tires, 24/7 support).
-7. **How it works:** 4 steps (01–04): choose car → customize extras → online check → home delivery.
-8. **Add-ons:** Copy + two option rows (Insurance Plus, Unlimited Mileage) + interior image and “Available Now” pill.
-9. **Repeated CTA:** Rounded dark panel, glow accents, **See All Cars**.
-10. **Footer:** Brand blurb + social icons, **Company** & **Support** link lists (Support anchor `#support`), **Newsletter** email field (UI only, no submit backend).
+7. **How it works:** **Black** section — 4 steps (01–04) with light copy; yellow step numerals.
+8. **Add-ons:** **`surface`** — copy + two option rows (Insurance Plus, Unlimited Mileage) + interior image and “Available Now” pill.
+9. **Repeated CTA:** **`surface`** outer + light elevated card (aligned with add-ons), **See All Cars** primary button.
+10. **Footer:** **`#222222`** background, light typography; brand blurb + social icons; **Company** & **Support** link lists (Support anchor `#support`); **Newsletter** email field (UI only, no submit backend).
 
 ## Tech
 
@@ -42,7 +46,7 @@ Deliver one polished landing page MVP: strong hero, fleet brands, benefits, comp
 ## Constraints
 
 - Do not paste proprietary beely.fi source; Stitch HTML is the approved design reference for this repo.
-- Newsletter and search are **non-functional** placeholders.
+- Newsletter is a **non-functional** placeholder (no backend). **Search was removed** from the landing page.
 - Keep semantic HTML (`nav`, `main`, `section`, `footer`, `table` where used).
 
 ## Deliverables

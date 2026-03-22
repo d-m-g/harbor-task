@@ -4,7 +4,7 @@ import { MaterialIcon } from "./ui/MaterialIcon";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[640px] items-center overflow-hidden px-8 pt-28 lg:min-h-[870px] lg:px-24">
+    <section className="relative flex min-h-[640px] items-center overflow-hidden bg-surface px-8 pt-28 lg:min-h-[870px] lg:px-24">
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-12">
         <div className="z-10 space-y-8 lg:col-span-6">
           <h1 className="font-headline text-5xl font-black leading-[1.1] tracking-tighter text-on-surface lg:text-7xl">

@@ -3,7 +3,7 @@ import { MaterialIcon } from "./ui/MaterialIcon";
 
 export function Benefits() {
   return (
-    <section id="benefits" className="px-8 py-24">
+    <section id="benefits" className="bg-surface px-8 py-24">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {stitchBenefits.cards.map((card) => (

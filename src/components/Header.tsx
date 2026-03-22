@@ -7,16 +7,16 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="glass-nav fixed top-0 z-50 w-full shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-8 py-4">
-        <div className="flex items-center gap-8 lg:gap-12">
+    <nav className="glass-nav fixed top-0 z-50 w-full border-b border-neutral-200/80 shadow-sm">
+      <div className="mx-auto flex min-h-[3.75rem] max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 sm:py-3.5 lg:px-8">
+        <div className="flex items-center gap-6 sm:gap-8 lg:gap-12">
           <a
             href="#"
             className="text-2xl font-black tracking-tighter text-neutral-900"
           >
             Beely
           </a>
-          <div className="hidden gap-8 md:flex">
+          <div className="hidden gap-6 md:flex lg:gap-8">
             {navLinks.map((link, i) => (
               <a
                 key={link.href}
@@ -33,32 +33,16 @@ export function Header() {
           </div>
         </div>
 
-        <div className="flex items-center gap-4 sm:gap-6">
-          <div className="hidden items-center gap-2 rounded-full bg-surface-container-high px-4 py-2 lg:flex">
-            <MaterialIcon
-              name="search"
-              className="text-sm text-on-surface-variant"
-            />
-            <input
-              type="search"
-              placeholder="Search brands..."
-              className="w-40 border-none bg-transparent text-sm focus:ring-0"
-              aria-label="Search brands"
-            />
-          </div>
-
+        <div className="flex items-center gap-3 sm:gap-6">
           <a href="#cars">
-            <Button
-              type="button"
-              className="hidden px-6 py-2.5 sm:inline-flex"
-            >
+            <Button type="button" className="hidden px-5 py-2.5 sm:inline-flex">
               Browse Cars
             </Button>
           </a>
 
           <button
             type="button"
-            className="group flex cursor-pointer items-center gap-2 rounded-lg p-1 transition-all hover:bg-neutral-100"
+            className="group flex cursor-pointer items-center gap-2 rounded-lg p-1.5 text-neutral-700 transition-all hover:bg-neutral-100"
             aria-label="MyBeely account"
           >
             <MaterialIcon
@@ -86,21 +70,21 @@ export function Header() {
       {open ? (
         <div
           id="mobile-nav"
-          className="border-t border-neutral-200 bg-white px-8 py-4 md:hidden"
+          className="border-t border-neutral-200 bg-white/95 px-4 py-4 backdrop-blur-sm sm:px-6 md:hidden"
         >
-          <div className="flex flex-col gap-3">
+          <div className="mx-auto flex max-w-7xl flex-col gap-3">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="rounded-lg py-2 font-medium text-neutral-700 hover:bg-neutral-50"
+                className="rounded-lg py-2.5 font-medium text-neutral-700 hover:bg-neutral-50"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
               </a>
             ))}
-            <a href="#cars" onClick={() => setOpen(false)}>
-              <Button type="button" className="mt-2 w-full">
+            <a href="#cars" onClick={() => setOpen(false)} className="pt-1">
+              <Button type="button" className="w-full">
                 Browse Cars
               </Button>
             </a>

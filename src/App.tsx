@@ -13,11 +13,11 @@ function App() {
   return (
     <>
       <Header />
-      <main className="pt-20">
+      <main className="bg-black pt-20">
         <Hero />
         <BrandGrid />
-        <Benefits />
         <ComparisonSection />
+        <Benefits />
         <IncludedServices />
         <HowItWorks />
         <AddOnsSection />

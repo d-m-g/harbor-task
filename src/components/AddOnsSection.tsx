@@ -3,7 +3,7 @@ import { MaterialIcon } from "./ui/MaterialIcon";
 
 export function AddOnsSection() {
   return (
-    <section id="addons" className="overflow-hidden px-8 py-24">
+    <section id="addons" className="overflow-hidden bg-surface px-8 py-24">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-16 lg:flex-row">
         <div className="space-y-8 lg:w-1/2">
           <h2 className="font-headline text-4xl font-black">{addOns.title}</h2>
