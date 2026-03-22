@@ -2,29 +2,35 @@
 
 Redesign of Wheely (automotive subscription landing).
 
-## GitHub Pages
+## GitHub Pages (deploy from branch)
 
-The site is built with **Vite** and deployed from the **`main`** branch via GitHub Actions.
+The production build is published to the **`gh-pages`** branch. GitHub Pages serves that branch as the site.
 
-**Live URL (after setup):** [https://d-m-g.github.io/harbor-task/](https://d-m-g.github.io/harbor-task/)
+**URL:** [https://d-m-g.github.io/harbor-task/](https://d-m-g.github.io/harbor-task/)
 
-### One-time setup
+### One-time GitHub settings
 
-1. Push this repo to GitHub (if it is not already there).
-2. On GitHub: **Settings → Pages → Build and deployment**.
-3. Under **Source**, choose **GitHub Actions** (not “Deploy from a branch”).
-4. Push to `main` (or merge a PR). The workflow **Deploy to GitHub Pages** builds and publishes `dist/`.
-5. Wait for the run to finish; the site URL appears in the workflow summary and under **Pages**.
+1. **Settings → Pages → Build and deployment**
+2. **Source:** **Deploy from a branch**
+3. **Branch:** `gh-pages`, folder **`/ (root)`**, Save
+
+### Publish (each time you want to update the live site)
+
+```bash
+npm ci
+npm run deploy
+```
+
+That runs `vite build` (with base path `/harbor-task/`) and pushes **`dist/`** to the **`gh-pages`** branch. After the push, the site updates in about a minute.
+
+Requires git remote `origin` pointing at this GitHub repo and permission to push.
 
 ### Local preview (production build)
 
 ```bash
-npm ci
 npm run build
 npx vite preview --base /harbor-task/
 ```
-
-Then open the URL Vite prints (paths match GitHub Pages).
 
 ### Changing the repo name
 
