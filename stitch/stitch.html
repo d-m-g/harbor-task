@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Beely | High-End Automotive Subscription</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline-variant": "#cdc7ab",
+                        "on-primary-container": "#6e6500",
+                        "primary": "#686000",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary": "#5f5e5e",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "surface-container-high": "#ebe7e7",
+                        "on-surface": "#1c1b1b",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "inverse-primary": "#dac900",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-primary-fixed": "#1f1c00",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-primary-fixed-variant": "#4e4800",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-container": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#474646",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-dim": "#dcd9d9",
+                        "surface-tint": "#686000",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#646363",
+                        "primary-fixed": "#f8e505",
+                        "tertiary-container": "#e3e0e0",
+                        "surface-variant": "#e5e2e1",
+                        "inverse-surface": "#313030",
+                        "on-background": "#1c1b1b",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface": "#fcf9f8",
+                        "tertiary": "#5f5e5e",
+                        "surface-container": "#f0edec",
+                        "on-secondary-container": "#656464",
+                        "outline": "#7c785f",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#4a4732",
+                        "primary-container": "#f7e400",
+                        "background": "#fcf9f8",
+                        "surface-bright": "#fcf9f8",
+                        "primary-fixed-dim": "#dac900",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef"
+                    },
+                    fontFamily: {
+                        "headline": ["Epilogue"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .text-shadow-subtle {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-12">
+<span class="text-2xl font-black tracking-tighter text-neutral-900">Beely</span>
+<div class="hidden md:flex gap-8">
+<a class="text-neutral-900 font-bold border-b-2 border-yellow-400 py-1 transition-all" href="#">Cars</a>
+<a class="text-neutral-500 hover:text-yellow-400 transition-colors py-1" href="#">How it Works</a>
+<a class="text-neutral-500 hover:text-yellow-400 transition-colors py-1" href="#">Support</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container-high rounded-full px-4 py-2 gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-40" placeholder="Search brands..." type="text"/>
+</div>
+<button class="bg-primary-container text-on-primary-fixed px-6 py-2.5 rounded-xl font-bold hover:bg-yellow-400 transition-all active:scale-95">
+                    Browse Cars
+                </button>
+<div class="flex items-center gap-2 cursor-pointer hover:bg-neutral-100 p-1 rounded-lg transition-all group">
+<span class="material-symbols-outlined text-neutral-600 group-hover:text-neutral-900" data-icon="account_circle">account_circle</span>
+<span class="text-sm font-semibold hidden sm:inline">MyBeely</span>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center px-8 lg:px-24 overflow-hidden">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 z-10 space-y-8">
+<h1 class="font-headline font-black text-5xl lg:text-7xl leading-[1.1] tracking-tighter text-on-surface">
+                        Get a car for a <span class="text-primary-container bg-on-surface px-2">fixed</span> monthly price.
+                    </h1>
+<p class="text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                        Maintenance, inspections, and repairs always included. Flexibility with short contracts starting from 6 months.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary-container text-on-primary-fixed text-lg px-8 py-4 rounded-xl font-black shadow-lg hover:shadow-xl transition-all active:scale-95 flex items-center justify-center gap-2">
+                            Browse Cars
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="bg-surface-container-highest text-on-surface text-lg px-8 py-4 rounded-xl font-bold hover:bg-surface-container-high transition-all flex items-center justify-center">
+                            How it works
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-6 relative h-[400px] lg:h-[600px]">
+<div class="absolute inset-0 bg-primary-container rounded-[3rem] rotate-3 scale-95 opacity-20"></div>
+<img alt="Modern luxury car front view" class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-2xl z-0 transform hover:scale-[1.02] transition-transform duration-700" data-alt="Modern dark grey luxury car front profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtYsAwgyenmyGx1KGU8ineuo7DuFo3Lno0M_EDNTr41bc6wQYFbV3y-uW-kfoH6i0w8N7pLbOGwnu2PskU_l2kBNOcpOguDRsPEeGK9cfh4aWSqRgiu3vy6P9pOANO4I371qVmbgh8pE--BxCkTwAZEKGd5w4j-IO1ukzb-1pYiJAwuJALj68oAmB0kQygch_9y0LEMhyRAc-HWuwwoljEtveMEQ7Tf69emSvlMyhnKv9duoUc8hNa12xsdsIrh9RnZO-jXEkvD6Tw"/>
+</div>
+</div>
+</section>
+<!-- Brand Selection Section -->
+<section class="bg-surface-container-low py-20 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-12">
+<h2 class="font-headline font-bold text-3xl tracking-tight">Our Fleet Brands</h2>
+<a class="text-primary font-bold flex items-center gap-1 hover:underline underline-offset-8" href="#">
+                        Browse 30+ Brands
+                        <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<!-- Brand Cards -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex items-center justify-center grayscale hover:grayscale-0 transition-all border border-transparent hover:border-primary-container">
+<span class="text-xl font-black opacity-30">VOLKSWAGEN</span>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl flex items-center justify-center grayscale hover:grayscale-0 transition-all border border-transparent hover:border-primary-container">
+<span class="text-xl font-black opacity-30">TOYOTA</span>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl flex items-center justify-center grayscale hover:grayscale-0 transition-all border border-transparent hover:border-primary-container">
+<span class="text-xl font-black opacity-30">BMW</span>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl flex items-center justify-center grayscale hover:grayscale-0 transition-all border border-transparent hover:border-primary-container">
+<span class="text-xl font-black opacity-30">TESLA</span>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl flex items-center justify-center grayscale hover:grayscale-0 transition-all border border-transparent hover:border-primary-container">
+<span class="text-xl font-black opacity-30">AUDI</span>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl flex items-center justify-center grayscale hover:grayscale-0 transition-all border border-transparent hover:border-primary-container">
+<span class="text-xl font-black opacity-30">MERCEDES</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Benefits -->
+<section class="py-24 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-10 rounded-xl space-y-4 hover:shadow-xl transition-all">
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed" data-icon="payments">payments</span>
+</div>
+<h3 class="font-headline font-bold text-2xl">Fixed Monthly Payment</h3>
+<p class="text-on-surface-variant leading-relaxed">No surprises, everything included. One single invoice for everything related to your mobility.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-xl space-y-4 hover:shadow-xl transition-all">
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed" data-icon="build">build</span>
+</div>
+<h3 class="font-headline font-bold text-2xl">Maintenance Included</h3>
+<p class="text-on-surface-variant leading-relaxed">Full service and repair coverage. From oil changes to brake pads, we take care of it all.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-xl space-y-4 hover:shadow-xl transition-all">
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed" data-icon="calendar_today">calendar_today</span>
+</div>
+<h3 class="font-headline font-bold text-2xl">Short Contracts</h3>
+<p class="text-on-surface-variant leading-relaxed">Flexible terms from 6 months. Ideal for modern lifestyles and changing business needs.</p>
+</div>
+</div>
+</section>
+<!-- Comparison Section -->
+<section class="bg-on-surface text-surface py-24 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline font-black text-4xl lg:text-5xl">Why Beely?</h2>
+<p class="text-tertiary-fixed text-lg">The best of both worlds: easy like leasing, flexible like ownership.</p>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-surface/10">
+<th class="py-6 font-bold text-xl">Features</th>
+<th class="py-6 text-primary-container font-black text-2xl">Beely Subscription</th>
+<th class="py-6 text-surface-container-highest font-medium opacity-60">Traditional Leasing</th>
+<th class="py-6 text-surface-container-highest font-medium opacity-60">Ownership</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface/10">
+<tr>
+<td class="py-6">Min. Duration</td>
+<td class="py-6 text-primary-container font-bold">6 Months</td>
+<td class="py-6 opacity-60">24 - 48 Months</td>
+<td class="py-6 opacity-60">Long-term commitment</td>
+</tr>
+<tr>
+<td class="py-6">Included Maintenance</td>
+<td class="py-6 text-primary-container"><span class="material-symbols-outlined" data-icon="check_circle">check_circle</span></td>
+<td class="py-6 opacity-60">Extra Cost</td>
+<td class="py-6 opacity-60">Extra Cost</td>
+</tr>
+<tr>
+<td class="py-6">Down Payment</td>
+<td class="py-6 text-primary-container font-bold">$0 / No hidden fees</td>
+<td class="py-6 opacity-60">High upfront cost</td>
+<td class="py-6 opacity-60">Full payment or high DP</td>
+</tr>
+<tr>
+<td class="py-6">Paperwork</td>
+<td class="py-6 text-primary-container font-bold">100% Online / Instant</td>
+<td class="py-6 opacity-60">Complex / Bank visits</td>
+<td class="py-6 opacity-60">Manual Registration</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Included Services Grid -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline font-black text-3xl mb-12">No hidden costs. Ever.</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center gap-4">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="font-bold text-sm uppercase tracking-wider">Servicing</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center gap-4">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="home_repair_service">home_repair_service</span>
+<span class="font-bold text-sm uppercase tracking-wider">Repairs</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center gap-4">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="verified">verified</span>
+<span class="font-bold text-sm uppercase tracking-wider">Inspections</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center gap-4">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="ac_unit">ac_unit</span>
+<span class="font-bold text-sm uppercase tracking-wider">Seasonal Tires</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center gap-4">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="support_agent">support_agent</span>
+<span class="font-bold text-sm uppercase tracking-wider">24/7 Support</span>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline font-black text-4xl">From online to driveway in days</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+<div class="p-8 space-y-4">
+<div class="text-5xl font-black text-primary-container drop-shadow-sm">01</div>
+<h4 class="font-bold text-xl">Choose a car</h4>
+<p class="text-on-surface-variant text-sm">Select from our premium fleet of brand new vehicles.</p>
+</div>
+<div class="p-8 space-y-4">
+<div class="text-5xl font-black text-primary-container drop-shadow-sm">02</div>
+<h4 class="font-bold text-xl">Customize extras</h4>
+<p class="text-on-surface-variant text-sm">Pick your mileage package and insurance level.</p>
+</div>
+<div class="p-8 space-y-4">
+<div class="text-5xl font-black text-primary-container drop-shadow-sm">03</div>
+<h4 class="font-bold text-xl">Online check</h4>
+<p class="text-on-surface-variant text-sm">Quick and secure credit check. Fully digital.</p>
+</div>
+<div class="p-8 space-y-4">
+<div class="text-5xl font-black text-primary-container drop-shadow-sm">04</div>
+<h4 class="font-bold text-xl">Home delivery</h4>
+<p class="text-on-surface-variant text-sm">We bring your car to your doorstep, ready to drive.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Add-ons Section -->
+<section class="py-24 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2 space-y-8">
+<h2 class="font-headline font-black text-4xl">Customize Your Ride</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Tailor your subscription to fit your lifestyle perfectly. Add protection or flexibility with a single click.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 bg-surface-container-low p-6 rounded-xl border-l-4 border-primary-container">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="shield">shield</span>
+<div>
+<h5 class="font-bold">Insurance Plus</h5>
+<p class="text-sm text-on-surface-variant">Full coverage with zero deductible options.</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-low p-6 rounded-xl">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="add_road">add_road</span>
+<div>
+<h5 class="font-bold">Unlimited Mileage</h5>
+<p class="text-sm text-on-surface-variant">For the wanderers. No caps on your adventures.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 relative">
+<div class="bg-surface-container-highest w-full h-96 rounded-xl flex items-center justify-center relative overflow-hidden">
+<img alt="Luxury car interior dashboard" class="w-full h-full object-cover rounded-xl opacity-80" data-alt="Modern minimalist car interior cockpit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGgqNj2DL9SI3G2ujDJYyuX7KDuSLQEkmqyZwaF6SeKR32zPLuVJNfHLL0tJSplnS49KMr66Wn4MXxi47OxknYWDu4ow9E4_dw_0MP9uVOX1Rq6I2R7sFT-nuvGIZ1pL6YOSyeL6qwPknRld4KbYQl11psQkUYpbJ_bn60LIkiCdr_MNw9JQcDgf5s_YyBTMukj3wDATARYqtHRaGGBdjM0Q5FReRvBq7QrVMwcmxkTCuJoWGB5I9kPCMNldt0qzcPxmkjcZ3G0dm_"/>
+<div class="absolute bottom-8 right-8 bg-surface p-4 rounded-xl shadow-2xl flex items-center gap-3">
+<span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
+<span class="text-xs font-bold uppercase tracking-widest">Available Now</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Repeated CTA Block -->
+<section class="px-8 pb-24">
+<div class="max-w-7xl mx-auto bg-on-surface rounded-[2rem] p-12 lg:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/10 blur-[100px]"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-primary-container/10 blur-[100px]"></div>
+<div class="relative z-10 space-y-8">
+<h2 class="font-headline font-black text-4xl lg:text-6xl text-surface">Ready to find your car?</h2>
+<p class="text-tertiary-fixed text-lg max-w-xl mx-auto">Join the 10,000+ drivers who switched to the new way of having a car. No paperwork, no stress.</p>
+<button class="bg-primary-container text-on-primary-fixed px-12 py-5 rounded-xl font-black text-xl hover:scale-105 transition-transform active:scale-95 shadow-[0_20px_40px_rgba(247,228,0,0.15)]">
+                        See All Cars
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-50 py-16 px-8 mt-20 border-t border-neutral-200">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+<div class="space-y-6">
+<span class="text-xl font-black text-neutral-900">Beely</span>
+<p class="text-neutral-600 text-sm leading-relaxed">
+                    The next generation of car ownership. Transparent, flexible, and completely digital.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-neutral-400 hover:text-primary cursor-pointer transition-colors" data-icon="public">public</span>
+<span class="material-symbols-outlined text-neutral-400 hover:text-primary cursor-pointer transition-colors" data-icon="share">share</span>
+</div>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold uppercase text-xs tracking-widest text-neutral-400">Company</h5>
+<ul class="space-y-2 text-neutral-600">
+<li><a class="hover:text-yellow-400 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-yellow-400 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-yellow-400 transition-colors" href="#">Cookies</a></li>
+<li><a class="hover:text-yellow-400 transition-colors" href="#">Imprint</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold uppercase text-xs tracking-widest text-neutral-400">Support</h5>
+<ul class="space-y-2 text-neutral-600">
+<li><a class="hover:text-yellow-400 transition-colors" href="#">Contact Support</a></li>
+<li><a class="hover:text-yellow-400 transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-yellow-400 transition-colors" href="#">Safety</a></li>
+<li><a class="hover:text-yellow-400 transition-colors" href="#">Fleet Partnership</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-bold uppercase text-xs tracking-widest text-neutral-400">Newsletter</h5>
+<p class="text-sm text-neutral-600">Get the best offers before they vanish.</p>
+<div class="flex bg-white p-1 rounded-lg shadow-sm border border-neutral-200">
+<input class="bg-transparent border-none focus:ring-0 text-sm px-3 flex-grow" placeholder="Your email" type="email"/>
+<button class="bg-neutral-900 text-white px-4 py-2 rounded-md font-bold text-xs">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-neutral-200">
+<p class="text-neutral-500 text-xs text-center">© 2024 Beely Automotive Subscription. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
