@@ -6,10 +6,10 @@ export function Footer() {
   const [email, setEmail] = useState("");
 
   return (
-    <footer className="mt-20 border-t border-white/10 bg-beely-support px-8 py-16 text-neutral-200">
+    <footer className="mt-20 border-t border-white/10 bg-wheely-support px-8 py-16 text-neutral-200">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 md:grid-cols-4">
         <div className="space-y-6">
-          <span className="text-xl font-black text-white">Beely</span>
+          <span className="text-xl font-black text-white">Wheely</span>
           <p className="text-sm leading-relaxed text-neutral-300">
             {footer.blurb}
           </p>

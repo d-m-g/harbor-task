@@ -4,14 +4,14 @@ import { buttonClass } from "./ui/Button";
 export function CtaBanner() {
   return (
     <section id="cta" className="bg-surface px-4 py-24 sm:px-6 lg:px-8">
-      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-surface-container-high bg-surface-container-lowest p-10 text-center shadow-sm sm:p-14 lg:p-20">
+      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-white/10 bg-black p-10 text-center shadow-lg sm:p-14 lg:p-20">
         <div className="absolute right-0 top-0 h-48 w-48 bg-primary-container/15 blur-[80px]" />
         <div className="absolute bottom-0 left-0 h-48 w-48 bg-primary-container/10 blur-[80px]" />
         <div className="relative z-10 space-y-8">
-          <h2 className="font-headline text-4xl font-black text-on-surface lg:text-6xl">
+          <h2 className="font-headline text-4xl font-black text-white lg:text-6xl">
             {ctaBanner.title}
           </h2>
-          <p className="mx-auto max-w-xl text-lg text-on-surface-variant">
+          <p className="mx-auto max-w-xl text-lg text-neutral-300">
             {ctaBanner.body}
           </p>
           <a

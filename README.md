@@ -1,2 +1,2 @@
 # harbor-task
-Redesign of beely.fi website
+Redesign of wheely (automotive subscription landing)

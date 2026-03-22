@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="bg-black pt-20">
+      <main className="bg-white pt-20">
         <RevealOnScroll>
           <Hero />
         </RevealOnScroll>

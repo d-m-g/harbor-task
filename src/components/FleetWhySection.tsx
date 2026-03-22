@@ -5,11 +5,11 @@ export function FleetWhySection() {
   return (
     <section
       id="cars"
-      className="bg-beely-support px-4 py-16 text-neutral-100 sm:px-6 lg:py-24 lg:px-8"
+      className="bg-wheely-support px-4 py-16 text-neutral-100 sm:px-6 lg:py-24 lg:px-8"
     >
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-3 lg:items-start lg:gap-10 xl:gap-12">
-          {/* Why Beely — 2/3 */}
+          {/* Why Wheely — 2/3 */}
           <div className="min-w-0 lg:col-span-2">
             <div className="mb-8 space-y-3 text-left">
               <h2 className="font-headline text-3xl font-black text-white sm:text-4xl lg:text-5xl">
@@ -27,7 +27,7 @@ export function FleetWhySection() {
                       Features
                     </th>
                     <th className="py-3 px-1 text-sm font-black text-primary-container sm:py-4 sm:text-base lg:text-lg">
-                      Beely
+                      Wheely
                     </th>
                     <th className="py-3 px-1 text-xs font-medium text-neutral-400 sm:py-4 sm:text-sm">
                       Leasing
@@ -44,14 +44,14 @@ export function FleetWhySection() {
                         {row.feature}
                       </td>
                       <td className="py-3 px-1 text-primary-container sm:py-4">
-                        {"beelyKind" in row && row.beelyKind === "check" ? (
+                        {"wheelyKind" in row && row.wheelyKind === "check" ? (
                           <MaterialIcon
                             name="check_circle"
                             className="text-primary-container"
                           />
                         ) : (
                           <span className="font-bold text-primary-container">
-                            {"beely" in row ? row.beely : ""}
+                            {"wheely" in row ? row.wheely : ""}
                           </span>
                         )}
                       </td>

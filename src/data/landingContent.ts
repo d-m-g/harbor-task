@@ -60,30 +60,30 @@ export const stitchBenefits = {
 };
 
 export const comparison = {
-  title: "Why Beely?",
+  title: "Why Wheely?",
   subtitle: "The best of both worlds: easy like leasing, flexible like ownership.",
   rows: [
     {
       feature: "Min. Duration",
-      beely: "6 Months",
+      wheely: "6 Months",
       leasing: "24 - 48 Months",
       ownership: "Long-term commitment",
     },
     {
       feature: "Included Maintenance",
-      beelyKind: "check" as const,
+      wheelyKind: "check" as const,
       leasing: "Extra Cost",
       ownership: "Extra Cost",
     },
     {
       feature: "Down Payment",
-      beely: "$0 / No hidden fees",
+      wheely: "$0 / No hidden fees",
       leasing: "High upfront cost",
       ownership: "Full payment or high DP",
     },
     {
       feature: "Paperwork",
-      beely: "100% Online / Instant",
+      wheely: "100% Online / Instant",
       leasing: "Complex / Bank visits",
       ownership: "Manual Registration",
     },
@@ -157,7 +157,7 @@ export const ctaBanner = {
 export const footer = {
   blurb:
     "The next generation of car ownership. Transparent, flexible, and completely digital.",
-  legal: "© 2026 Beely Automotive Subscription. All rights reserved.",
+  legal: "© 2026 Wheely Automotive Subscription. All rights reserved.",
   columns: [
     {
       title: "Company",

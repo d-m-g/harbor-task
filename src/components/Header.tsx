@@ -14,7 +14,7 @@ export function Header() {
             href="#"
             className="text-2xl font-black tracking-tighter text-neutral-900"
           >
-            Beely
+            Wheely
           </a>
           <div className="hidden gap-6 md:flex lg:gap-8">
             {navLinks.map((link, i) => (
@@ -43,14 +43,14 @@ export function Header() {
           <button
             type="button"
             className="group flex cursor-pointer items-center gap-2 rounded-lg p-1.5 text-neutral-700 transition-all hover:bg-neutral-100"
-            aria-label="MyBeely account"
+            aria-label="MyWheely account"
           >
             <MaterialIcon
               name="account_circle"
               className="text-neutral-600 group-hover:text-neutral-900"
             />
             <span className="hidden text-sm font-semibold sm:inline">
-              MyBeely
+              MyWheely
             </span>
           </button>
 

@@ -19,11 +19,11 @@
   --color-tertiary-fixed: #e5e2e1;
   --color-surface-variant: #e5e2e1;
   /* Brand palette aliases (MVP) */
-  --color-beely-primary: #f7e400;
-  --color-beely-primary-hover: #e6d300;
-  --color-beely-secondary: #000000;
-  --color-beely-support: #222222;
-  --color-beely-border: color-mix(in srgb, var(--color-beely-support) 12%, white);
+  --color-wheely-primary: #f7e400;
+  --color-wheely-primary-hover: #e6d300;
+  --color-wheely-secondary: #000000;
+  --color-wheely-support: #222222;
+  --color-wheely-border: color-mix(in srgb, var(--color-wheely-support) 12%, white);
 }
 
 html {
