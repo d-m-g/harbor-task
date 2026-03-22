@@ -19,7 +19,8 @@ Deliver one polished landing page MVP: strong hero, fleet brands, benefits, comp
 - **MVP brand aliases** (optional): `beely-primary`, `beely-secondary`, `beely-support` (**#222222**) kept for compatibility with earlier tokens.
 - **Chrome:** **Glass header** (`.glass-nav` — **more transparent** white ~55% + stronger blur): logo + nav + primary **Browse Cars** (yellow button). **No search field.** Responsive padding (`px-4` → `lg:px-8`, `py-3` / `py-3.5`, `min-h` for consistent bar height). Rounded-xl CTAs, large hero imagery.
 - **Page canvas:** **Black** (`#000000`) behind the main flow; sections that use dark text on light UI use an explicit **`surface`** (or related container) background so copy stays readable.
-- **Dark bands:** **Our Fleet Brands** and **How it works** (“From online to driveway…”) use **`bg-black`** with **light text**, **yellow** accents (`primary-container`), and translucent cards where needed for contrast.
+- **Fleet + Why Beely (combined):** One **`#222222`** (`beely-support`) band: **Why Beely?** table **~2/3**; fleet **~1/3** with **3×3** grid (**nine** logos from **`public/logos/`**, larger display). Stacks on small screens (comparison first). Anchor **`#cars`**.
+- **Dark band:** **How it works** uses **`bg-black`** with light text and yellow numerals.
 - **Light closing CTA:** **“Ready to find your car?”** sits on **`surface`** (same family as **Customize your ride** / add-ons): light card, **`text-on-surface`** / **`text-on-surface-variant`**, yellow primary button.
 - **Footer:** Background **`#222222`** (`beely-support`), light text, subtle borders (`white/10`), newsletter field on a translucent dark treatment; primary-yellow **Join** button.
 
@@ -27,14 +28,12 @@ Deliver one polished landing page MVP: strong hero, fleet brands, benefits, comp
 
 1. **Header (fixed):** Glass bar, logo “Beely”, nav (Cars, How it Works, Support), **Browse Cars** CTA, **MyBeely** — **no search**.
 2. **Hero:** Headline with highlighted word “fixed”, supporting line about maintenance & short contracts, primary + secondary CTAs, hero car image (Stitch asset URL).
-3. **Fleet brands:** **Black** section — “Our Fleet Brands” + “Browse 30+ Brands” (yellow link); **uppercase wordmark** cards on translucent panels (readable on dark).
-4. **Comparison (“Why Beely?”):** Dark section, **feature table**: Beely vs Traditional leasing vs Ownership (duration, maintenance, down payment, paperwork).
-5. **Key benefits (3 cards):** Fixed monthly payment, Maintenance included, Short contracts—with Material icons.
-6. **Included services:** “No hidden costs. Ever.” — 5 icon tiles (servicing, repairs, inspections, seasonal tires, 24/7 support).
-7. **How it works:** **Black** section — 4 steps (01–04) with light copy; yellow step numerals.
-8. **Add-ons:** **`surface`** — copy + two option rows (Insurance Plus, Unlimited Mileage) + interior image and “Available Now” pill.
-9. **Repeated CTA:** **`surface`** outer + light elevated card (aligned with add-ons), **See All Cars** primary button.
-10. **Footer:** **`#222222`** background, light typography; brand blurb + social icons; **Company** & **Support** link lists (Support anchor `#support`); **Newsletter** email field (UI only, no submit backend).
+3. **Fleet + Why Beely (`FleetWhySection`):** **`#222222`**. **2/3** table + **1/3** fleet; **3×3** logos (9 brands), ~2× prior logo size. Responsive table scroll on narrow widths.
+4. **No hidden costs + benefits (`NoHiddenBenefitsSection`):** Single section, **`id="included"`**. **H2:** “No hidden costs. Ever.” Then **3** benefit cards (fixed payment, maintenance, short contracts), then **5** included-service icon tiles — all on **`surface`** with readable **`on-surface`** / **`on-surface-variant`** text.
+5. **How it works:** **Black** section — 4 steps (01–04) with light copy; yellow step numerals.
+6. **Add-ons:** **`surface`** — copy + two option rows (Insurance Plus, Unlimited Mileage) + interior image and “Available Now” pill.
+7. **Repeated CTA:** **`surface`** outer + light elevated card (aligned with add-ons), **See All Cars** primary button.
+8. **Footer:** **`#222222`** background, light typography; brand blurb + social icons; **Company** & **Support** link lists (Support anchor `#support`); **Newsletter** email field (UI only, no submit backend).
 
 ## Tech
 

@@ -1,13 +1,11 @@
 import { AddOnsSection } from "./components/AddOnsSection";
-import { Benefits } from "./components/Benefits";
-import { BrandGrid } from "./components/BrandGrid";
-import { ComparisonSection } from "./components/ComparisonSection";
 import { CtaBanner } from "./components/CtaBanner";
+import { FleetWhySection } from "./components/FleetWhySection";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { HowItWorks } from "./components/HowItWorks";
-import { IncludedServices } from "./components/IncludedServices";
+import { NoHiddenBenefitsSection } from "./components/NoHiddenBenefitsSection";
 
 function App() {
   return (
@@ -15,10 +13,8 @@ function App() {
       <Header />
       <main className="bg-black pt-20">
         <Hero />
-        <BrandGrid />
-        <ComparisonSection />
-        <Benefits />
-        <IncludedServices />
+        <FleetWhySection />
+        <NoHiddenBenefitsSection />
         <HowItWorks />
         <AddOnsSection />
         <CtaBanner />

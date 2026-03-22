@@ -25,15 +25,19 @@ export const hero = {
 export const brands = {
   title: "Our Fleet Brands",
   browseLink: "Browse 30+ Brands",
+  /** Nine logos in `public/logos/` for the 3×3 fleet grid. */
   items: [
-    "VOLKSWAGEN",
-    "TOYOTA",
-    "BMW",
-    "TESLA",
-    "AUDI",
-    "MERCEDES",
+    { name: "Volkswagen", logo: "/logos/vw.png" },
+    { name: "Toyota", logo: "/logos/toyota.png" },
+    { name: "BMW", logo: "/logos/bmw.png" },
+    { name: "Mercedes-Benz", logo: "/logos/mercedes.png" },
+    { name: "Ford", logo: "/logos/ford.png" },
+    { name: "Kia", logo: "/logos/kia.png" },
+    { name: "Opel", logo: "/logos/opel.png" },
+    { name: "Peugeot", logo: "/logos/peugeot.png" },
+    { name: "Škoda", logo: "/logos/skoda.png" },
   ],
-};
+} as const;
 
 export const stitchBenefits = {
   cards: [
