@@ -13,7 +13,7 @@ export function Header() {
         <div className="flex items-center gap-6 sm:gap-8 lg:gap-12">
           <a href="#" className="flex shrink-0 items-center" aria-label="Wheely home">
             <img
-              src={publicUrl("logos/wheely.jpg")}
+              src={publicUrl("logos/wheely.png")}
               alt="Wheely"
               className="h-8 w-auto object-contain sm:h-9"
               width={160}
