@@ -1,4 +1,5 @@
 import { brands, comparison } from "../data/landingContent";
+import { publicUrl } from "../utils/publicUrl";
 import { MaterialIcon } from "./ui/MaterialIcon";
 
 export function FleetWhySection() {
@@ -92,7 +93,7 @@ export function FleetWhySection() {
                   className="flex min-h-[5.5rem] items-center justify-center rounded-xl border border-white/10 bg-white p-4 transition-all hover:border-primary-container hover:shadow-md sm:min-h-[6.5rem] sm:p-5"
                 >
                   <img
-                    src={item.logo}
+                    src={publicUrl(item.logo)}
                     alt={item.name}
                     className="max-h-20 w-full max-w-[200px] object-contain sm:max-h-24"
                     loading="lazy"

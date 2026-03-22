@@ -40,7 +40,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative h-[400px] lg:col-span-6 lg:h-[600px]">
+        <div className="relative hidden h-[400px] lg:col-span-6 lg:block lg:h-[600px]">
           <div className="absolute inset-0 scale-95 rotate-3 rounded-[3rem] bg-primary-container opacity-20" />
           <img
             src={stitchImages.heroCar}

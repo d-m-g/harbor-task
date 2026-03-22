@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { navLinks } from "../data/landingContent";
+import { publicUrl } from "../utils/publicUrl";
 import { Button } from "./ui/Button";
 import { MaterialIcon } from "./ui/MaterialIcon";
 
@@ -10,11 +11,14 @@ export function Header() {
     <nav className="glass-nav fixed top-0 z-50 w-full border-b border-neutral-200/80 shadow-sm">
       <div className="mx-auto flex min-h-[3.75rem] max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 sm:py-3.5 lg:px-8">
         <div className="flex items-center gap-6 sm:gap-8 lg:gap-12">
-          <a
-            href="#"
-            className="text-2xl font-black tracking-tighter text-neutral-900"
-          >
-            Wheely
+          <a href="#" className="flex shrink-0 items-center" aria-label="Wheely home">
+            <img
+              src={publicUrl("logos/wheely.jpg")}
+              alt="Wheely"
+              className="h-8 w-auto object-contain sm:h-9"
+              width={160}
+              height={40}
+            />
           </a>
           <div className="hidden gap-6 md:flex lg:gap-8">
             {navLinks.map((link, i) => (
