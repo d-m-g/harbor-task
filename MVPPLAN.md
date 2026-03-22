@@ -11,8 +11,9 @@ The page should feel very similar to the current Beely homepage:
 	•	clean, commercial, trustworthy design
 	•	strong hero section
 	•	clear monthly pricing messaging
-	•	sections for car brands, benefits, how it works, comparison/explanation content, add-ons, FAQ/footer-style informational links
+	•	sections for popular car brands, included services, how it works, benefits, comparison/explanation content, add-ons, FAQ/footer-style informational links
 	•	responsive layout for desktop and mobile
+	•	all visible page text in English
 
 Tech requirements
 	•	Use React
@@ -47,9 +48,21 @@ Important constraints
 	•	Do not use copyrighted assets directly from the source site unless explicitly provided
 	•	Recreate the layout and feel using your own implementation
 	•	Use placeholder images / neutral automotive imagery / generic brand placeholders where necessary
-	•	Keep text close in style and meaning, but do not depend on exact production copy unless manually added later
+	•	Keep text close in style and meaning, but write the visible page text in English
 
-Suggested page structure
+Color scheme
+
+Use the following colors consistently across the landing page:
+	•	Primary: #F7E400
+	•	Secondary: #000000
+	•	Support: #222222
+
+Suggested usage:
+	•	Primary for CTA buttons, highlights, badges, and key emphasis areas
+	•	Secondary for main text, dark sections, and strong contrast
+	•	Support for secondary text, borders, muted UI elements, and supporting backgrounds
+
+Updated page structure
 
 Build the page with components roughly like this:
 	•	Header
@@ -62,41 +75,53 @@ Build the page with components roughly like this:
 	•	strong primary CTA
 	•	secondary supporting badges or quick trust points
 	•	hero image / car visual area
-	•	Brand / selection section
-	•	popular car brands or logo grid
+	•	Popular brands section
+	•	include actual visible brand logo placeholders or simple recreated logo-style marks for popular car brands
+	•	present the brands as a clean logo grid rather than plain text only
 	•	short supporting text
-	•	Key benefits section
-	•	cards for fixed monthly payment, maintenance included, flexibility, delivery, easy process
-	•	Explanation / comparison section
-	•	explain the product model simply
-	•	position it between leasing and installment purchase
-	•	include a few comparison cards or columns
 	•	Included services section
+	•	move this higher on the page
 	•	servicing
 	•	repairs
 	•	inspections
 	•	tires / seasonal support
 	•	app / support
+	•	How it works section
+	•	place this directly after the included services section
+	•	choose a car
+	•	choose contract / extras
+	•	get delivery
+	•	Explanation / comparison section
+	•	explain the product model simply
+	•	position it between leasing and installment purchase
+	•	include a few comparison cards or columns
+	•	Key benefits section
+	•	move the “Why choose monthly subscription” style section lower on the page
+	•	cards for fixed monthly payment, maintenance included, flexibility, delivery, easy process
 	•	Add-ons or optional extras section
 	•	insurance
 	•	extra protection / mobility cover
 	•	other optional items
-	•	How it works section
-	•	choose a car
-	•	choose contract / extras
-	•	get delivery
 	•	Repeated CTA block
 	•	reinforce browsing cars
 	•	Footer
 	•	grouped informational links
 	•	company/support/legal style layout
 
+Required ordering changes
+
+Reflect these structure changes explicitly:
+	•	Add logos to the popular brands section
+	•	Move “Why choose monthly subscription” lower on the page
+	•	Move “What’s included” higher on the page
+	•	Move “How it works” so it comes immediately after “What’s included”
+
 Design direction
 
 Match the current feel of beely.fi as much as possible:
 	•	clean white or light background base
 	•	dark text
-	•	restrained accent color
+	•	restrained accent color driven by the provided palette
 	•	rounded cards/buttons
 	•	commercial SaaS/automotive landing page aesthetic
 	•	calm and trustworthy, not flashy
@@ -110,6 +135,7 @@ Implementation details
 	•	Add responsive behavior for desktop/tablet/mobile
 	•	Use semantic HTML
 	•	Make buttons, cards, and layout easy to restyle later
+	•	Use English for headings, body text, buttons, labels, and footer links
 
 Deliverables
 	1.	A working React landing page
@@ -135,11 +161,3 @@ What to avoid for now
 Execution note
 
 Start by reproducing the homepage structure and visual composition as closely as possible. Think “faithful MVP recreation of the current landing page” rather than “new concept redesign.”
-
-
-The colorscheme
-primary - F7E400
-secondary - 000000
-support - 222222
-
-Text language - English
