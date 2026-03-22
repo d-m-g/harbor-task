@@ -38,6 +38,8 @@ Deliver one polished landing page MVP: strong hero, fleet brands, benefits, comp
 ## Tech
 
 - **React**, **TypeScript**, **Vite 6**, **Tailwind CSS v4** (`@tailwindcss/vite`).
+- **Scroll reveal:** major blocks wrapped in `RevealOnScroll` (`IntersectionObserver`, fade + slide up; disabled when `prefers-reduced-motion: reduce`).
+- **“No hidden costs. Ever.”** heading uses **large display scale** (`text-4xl` → `lg:text-8xl`).
 - Content in `src/data/landingContent.ts`; section components under `src/components/`.
 - **No** backend, **no** real auth, **no** routing beyond the single page.
 - Hero / add-on images: URLs from Stitch (`stitchImages` in data)—replace if they expire.

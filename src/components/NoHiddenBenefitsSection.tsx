@@ -9,7 +9,7 @@ export function NoHiddenBenefitsSection() {
   return (
     <section id="included" className="bg-surface px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <h2 className="font-headline mb-14 text-3xl font-black text-on-surface sm:mb-16 sm:text-4xl">
+        <h2 className="font-headline mb-14 max-w-5xl text-4xl font-black leading-[1.05] tracking-tight text-on-surface sm:mb-16 sm:text-6xl md:text-7xl lg:mb-20 lg:text-8xl">
           {includedServices.title}
         </h2>
 
