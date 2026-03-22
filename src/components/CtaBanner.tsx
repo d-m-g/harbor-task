@@ -3,24 +3,28 @@ import { buttonClass } from "./ui/Button";
 
 export function CtaBanner() {
   return (
-    <div className="border-y border-beely-border bg-beely-secondary">
-      <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 py-14 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-        <div className="max-w-xl">
-          <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+    <section id="cta" className="px-8 pb-24">
+      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-on-surface p-12 text-center lg:p-20">
+        <div className="absolute right-0 top-0 h-64 w-64 bg-primary-container/10 blur-[100px]" />
+        <div className="absolute bottom-0 left-0 h-64 w-64 bg-primary-container/10 blur-[100px]" />
+        <div className="relative z-10 space-y-8">
+          <h2 className="font-headline text-4xl font-black text-surface lg:text-6xl">
             {ctaBanner.title}
           </h2>
-          <p className="mt-2 text-neutral-300">{ctaBanner.body}</p>
+          <p className="mx-auto max-w-xl text-lg text-tertiary-fixed">
+            {ctaBanner.body}
+          </p>
+          <a
+            href="#cars"
+            className={buttonClass(
+              "primary",
+              "inline-flex px-12 py-5 text-xl font-black shadow-[0_20px_40px_rgba(247,228,0,0.15)] hover:scale-105"
+            )}
+          >
+            {ctaBanner.primaryCta}
+          </a>
         </div>
-        <a
-          href="#cars"
-          className={buttonClass(
-            "primary",
-            "shrink-0 px-6 py-3 text-base"
-          )}
-        >
-          {ctaBanner.primaryCta}
-        </a>
       </div>
-    </div>
+    </section>
   );
 }

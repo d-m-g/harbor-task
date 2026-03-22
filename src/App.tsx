@@ -13,13 +13,13 @@ function App() {
   return (
     <>
       <Header />
-      <main>
+      <main className="pt-20">
         <Hero />
         <BrandGrid />
+        <Benefits />
+        <ComparisonSection />
         <IncludedServices />
         <HowItWorks />
-        <ComparisonSection />
-        <Benefits />
         <AddOnsSection />
         <CtaBanner />
       </main>

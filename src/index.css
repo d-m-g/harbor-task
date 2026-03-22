@@ -1,14 +1,28 @@
 @import "tailwindcss";
 
+/* Stitch design tokens (Material-style palette from stitch.html) */
 @theme {
-  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Epilogue", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --color-surface: #fcf9f8;
+  --color-background: #fcf9f8;
+  --color-on-surface: #1c1b1b;
+  --color-on-surface-variant: #4a4732;
+  --color-primary-container: #f7e400;
+  --color-on-primary-fixed: #1f1c00;
+  --color-primary: #686000;
+  --color-surface-container-low: #f6f3f2;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-highest: #e5e2e1;
+  --color-surface-container-high: #ebe7e7;
+  --color-surface-container: #f0edec;
+  --color-tertiary-fixed: #e5e2e1;
+  --color-surface-variant: #e5e2e1;
+  /* Brand palette aliases (MVP) */
   --color-beely-primary: #f7e400;
   --color-beely-primary-hover: #e6d300;
   --color-beely-secondary: #000000;
   --color-beely-support: #222222;
-  /* Supporting backgrounds: very light tint of support */
-  --color-beely-surface: color-mix(in srgb, var(--color-beely-support) 4%, white);
-  /* Muted borders from support (plan: support for borders) */
   --color-beely-border: color-mix(in srgb, var(--color-beely-support) 12%, white);
 }
 
@@ -18,8 +32,14 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-sans);
-  background-color: var(--color-beely-surface);
-  color: var(--color-beely-support);
   -webkit-font-smoothing: antialiased;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
 }

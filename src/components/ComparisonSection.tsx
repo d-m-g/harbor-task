@@ -1,46 +1,53 @@
 import { comparison } from "../data/landingContent";
-import { Section } from "./layout/Section";
+import { MaterialIcon } from "./ui/MaterialIcon";
 
 export function ComparisonSection() {
   return (
-    <Section className="bg-beely-surface">
-      <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-beely-secondary sm:text-4xl">
-          {comparison.title}
-        </h2>
-        <p className="mt-4 text-lg leading-relaxed text-beely-support">
-          {comparison.intro}
-        </p>
-      </div>
-      <div className="mt-14 grid gap-5 lg:grid-cols-3">
-        {comparison.columns.map((col) => (
-          <article
-            key={col.label}
-            className={`rounded-2xl border p-6 transition-shadow duration-200 hover:shadow-md ${
-              col.highlight
-                ? "border-beely-primary bg-white shadow-md ring-2 ring-beely-primary"
-                : "border-beely-border bg-white"
-            }`}
-          >
-            <h3 className="text-lg font-semibold text-beely-secondary">
-              {col.label}
-            </h3>
-            <ul className="mt-4 space-y-3 text-sm text-beely-support">
-              {col.points.map((p) => (
-                <li key={p} className="flex gap-2">
-                  <span
-                    className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${
-                      col.highlight ? "bg-beely-primary" : "bg-neutral-400"
-                    }`}
-                    aria-hidden
-                  />
-                  {p}
-                </li>
+    <section id="comparison" className="bg-on-surface px-8 py-24 text-surface">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-16 space-y-4 text-center">
+          <h2 className="font-headline text-4xl font-black lg:text-5xl">
+            {comparison.title}
+          </h2>
+          <p className="text-lg text-tertiary-fixed">{comparison.subtitle}</p>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-left">
+            <thead>
+              <tr className="border-b border-surface/10">
+                <th className="py-6 text-xl font-bold">Features</th>
+                <th className="py-6 text-2xl font-black text-primary-container">
+                  Beely Subscription
+                </th>
+                <th className="py-6 font-medium text-surface-container-highest opacity-60">
+                  Traditional Leasing
+                </th>
+                <th className="py-6 font-medium text-surface-container-highest opacity-60">
+                  Ownership
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-surface/10">
+              {comparison.rows.map((row) => (
+                <tr key={row.feature}>
+                  <td className="py-6">{row.feature}</td>
+                  <td className="py-6 text-primary-container">
+                    {"beelyKind" in row && row.beelyKind === "check" ? (
+                      <MaterialIcon name="check_circle" className="text-primary-container" />
+                    ) : (
+                      <span className="font-bold">
+                        {"beely" in row ? row.beely : ""}
+                      </span>
+                    )}
+                  </td>
+                  <td className="py-6 opacity-60">{row.leasing}</td>
+                  <td className="py-6 opacity-60">{row.ownership}</td>
+                </tr>
               ))}
-            </ul>
-          </article>
-        ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </Section>
+    </section>
   );
 }

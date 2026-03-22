@@ -1,30 +1,33 @@
 import { brands } from "../data/landingContent";
-import { BrandLogoMark } from "./BrandLogoMark";
-import { Section } from "./layout/Section";
+import { MaterialIcon } from "./ui/MaterialIcon";
 
 export function BrandGrid() {
   return (
-    <Section id="cars" className="bg-beely-surface">
-      <div className="text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-beely-secondary sm:text-4xl">
-          {brands.title}
-        </h2>
-        <p className="mx-auto mt-3 max-w-2xl text-lg text-beely-support">
-          {brands.subtitle}
-        </p>
-      </div>
-      <ul className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-5">
-        {brands.items.map((item) => (
-          <li key={item.id}>
-            <div className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-beely-border bg-white px-4 py-6 shadow-sm transition-shadow hover:shadow-md">
-              <BrandLogoMark brandId={item.id} />
-              <span className="text-center text-xs font-semibold tracking-wide text-beely-support">
-                {item.name}
-              </span>
+    <section id="cars" className="bg-surface-container-low py-20">
+      <div className="mx-auto max-w-7xl px-8">
+        <div className="mb-12 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <h2 className="font-headline text-3xl font-bold tracking-tight">
+            {brands.title}
+          </h2>
+          <a
+            href="#cars"
+            className="flex items-center gap-1 font-bold text-primary hover:underline underline-offset-8"
+          >
+            {brands.browseLink}
+            <MaterialIcon name="open_in_new" className="text-sm" />
+          </a>
+        </div>
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-6">
+          {brands.items.map((name) => (
+            <div
+              key={name}
+              className="flex items-center justify-center rounded-xl border border-transparent bg-surface-container-lowest p-8 grayscale transition-all hover:border-primary-container hover:grayscale-0"
+            >
+              <span className="text-xl font-black opacity-30">{name}</span>
             </div>
-          </li>
-        ))}
-      </ul>
-    </Section>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

@@ -1,45 +1,28 @@
-import { benefits } from "../data/landingContent";
-import { Section } from "./layout/Section";
+import { stitchBenefits } from "../data/landingContent";
+import { MaterialIcon } from "./ui/MaterialIcon";
 
 export function Benefits() {
   return (
-    <Section className="bg-white">
-      <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-beely-secondary sm:text-4xl">
-          {benefits.title}
-        </h2>
-        <p className="mt-3 text-lg text-beely-support">{benefits.subtitle}</p>
-      </div>
-      <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {benefits.cards.map((card) => (
-          <li key={card.title}>
-            <article className="h-full rounded-2xl border border-beely-border bg-beely-surface/80 p-6 transition-shadow duration-200 hover:shadow-md">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-beely-primary/25 text-beely-secondary">
-                <IconSpark />
+    <section id="benefits" className="px-8 py-24">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          {stitchBenefits.cards.map((card) => (
+            <div
+              key={card.title}
+              className="space-y-4 rounded-xl bg-surface-container-lowest p-10 transition-all hover:shadow-xl"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-container">
+                <MaterialIcon
+                  name={card.icon}
+                  className="text-on-primary-fixed"
+                />
               </div>
-              <h3 className="text-lg font-semibold text-beely-secondary">
-                {card.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-beely-support">
-                {card.body}
-              </p>
-            </article>
-          </li>
-        ))}
-      </ul>
-    </Section>
-  );
-}
-
-function IconSpark() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
-      <path
-        d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-    </svg>
+              <h3 className="font-headline text-2xl font-bold">{card.title}</h3>
+              <p className="leading-relaxed text-on-surface-variant">{card.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

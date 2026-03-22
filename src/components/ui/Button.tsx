@@ -4,15 +4,14 @@ export type ButtonVariant = "primary" | "secondary" | "ghost";
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-beely-primary text-beely-secondary shadow-sm hover:bg-beely-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-beely-secondary",
+    "bg-primary-container text-on-primary-fixed shadow-sm hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-on-surface",
   secondary:
-    "bg-white text-beely-secondary ring-1 ring-inset ring-beely-border hover:bg-beely-surface",
-  ghost:
-    "text-beely-support hover:bg-beely-border/40",
+    "bg-surface-container-highest text-on-surface hover:bg-surface-container-high",
+  ghost: "text-on-surface-variant hover:bg-surface-container-low",
 };
 
 const baseClass =
-  "inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-200";
+  "inline-flex items-center justify-center rounded-xl px-5 py-2.5 text-sm font-bold transition-all active:scale-95";
 
 export function buttonClass(
   variant: ButtonVariant = "primary",
