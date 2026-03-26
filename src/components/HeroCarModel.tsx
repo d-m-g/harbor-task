@@ -7,7 +7,7 @@ import { publicUrl } from "../utils/publicUrl";
 function CarMesh() {
   const group = useRef<Group>(null);
   const targetRotation = useRef(0);
-  const gltf = useGLTF(publicUrl("bmw_m4_modified_widebody_knitro_builds.glb"));
+  const gltf = useGLTF(publicUrl("2020_skoda_kamiq_gt.glb"));
 
   useEffect(() => {
     const onScroll = () => {
@@ -27,13 +27,13 @@ function CarMesh() {
   });
 
   return (
-    <group ref={group} position={[-0.1, -0.5, -0.9]} scale={0.92}>
+    <group ref={group} position={[-0.1, -2, -0.9]} scale={150}>
       <primitive object={gltf.scene} />
     </group>
   );
 }
 
-useGLTF.preload(publicUrl("bmw_m4_modified_widebody_knitro_builds.glb"));
+useGLTF.preload(publicUrl("2020_skoda_kamiq_gt.glb"));
 
 export function HeroCarModel() {
   return (

@@ -47,6 +47,14 @@ export function Hero() {
 
         <div className="relative hidden h-[400px] lg:col-span-6 lg:block lg:h-[600px]">
           <div className="absolute inset-0 scale-95 rotate-3 rounded-[3rem] bg-primary-container opacity-20" />
+          <div className="absolute right-5 top-5 z-20 rounded-full bg-primary-container px-7 py-4 text-base text-on-primary-fixed shadow-lg ring-1 ring-black/10">
+            <span className="font-semibold">From </span>
+            <span className="text-xl font-black"> 343€ </span>
+            <span className="font-semibold">/mo</span>
+          </div>
+          <div className="absolute bottom-20 right-5 z-20 rounded-full bg-black px-5 py-2 text-sm font-extrabold tracking-wide text-white shadow-lg ring-1 ring-white/20">
+            Special Offer
+          </div>
           <Suspense
             fallback={
               <div className="absolute inset-0 z-0 grid place-items-center rounded-xl bg-neutral-100 text-neutral-500">
@@ -57,9 +65,9 @@ export function Hero() {
             <HeroCarModel />
           </Suspense>
           <p className="absolute bottom-4 left-4 right-4 z-10 rounded-md bg-white/85 px-3 py-2 text-xs leading-snug text-neutral-700 backdrop-blur-sm">
-            3D model: BMW M4 Widebody by vecarz (
+            3D model: 2020 Skoda Kamiq GT by Ddiaz Design (
             <a
-              href="https://skfb.ly/pF7EN"
+              href="https://skfb.ly/psyUV"
               className="underline underline-offset-2 hover:text-neutral-900"
               target="_blank"
               rel="noreferrer"
