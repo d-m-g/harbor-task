@@ -1,6 +1,11 @@
-import { hero, stitchImages } from "../data/landingContent";
+import { lazy, Suspense } from "react";
+import { hero } from "../data/landingContent";
 import { buttonClass } from "./ui/Button";
 import { MaterialIcon } from "./ui/MaterialIcon";
+
+const HeroCarModel = lazy(() =>
+  import("./HeroCarModel").then((m) => ({ default: m.HeroCarModel }))
+);
 
 export function Hero() {
   return (
@@ -42,11 +47,36 @@ export function Hero() {
 
         <div className="relative hidden h-[400px] lg:col-span-6 lg:block lg:h-[600px]">
           <div className="absolute inset-0 scale-95 rotate-3 rounded-[3rem] bg-primary-container opacity-20" />
-          <img
-            src={stitchImages.heroCar}
-            alt="Modern luxury car front view"
-            className="absolute inset-0 z-0 h-full w-full rounded-xl object-cover shadow-2xl transition-transform duration-700 hover:scale-[1.02]"
-          />
+          <Suspense
+            fallback={
+              <div className="absolute inset-0 z-0 grid place-items-center rounded-xl bg-neutral-100 text-neutral-500">
+                Loading 3D model...
+              </div>
+            }
+          >
+            <HeroCarModel />
+          </Suspense>
+          <p className="absolute bottom-4 left-4 right-4 z-10 rounded-md bg-white/85 px-3 py-2 text-xs leading-snug text-neutral-700 backdrop-blur-sm">
+            3D model: BMW M4 Widebody by vecarz (
+            <a
+              href="https://skfb.ly/pF7EN"
+              className="underline underline-offset-2 hover:text-neutral-900"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Sketchfab
+            </a>
+            ), licensed under{" "}
+            <a
+              href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+              className="underline underline-offset-2 hover:text-neutral-900"
+              target="_blank"
+              rel="noreferrer"
+            >
+              CC BY-NC-SA 4.0
+            </a>
+            .
+          </p>
         </div>
       </div>
     </section>

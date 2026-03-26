@@ -28,7 +28,7 @@ export function Header() {
                 className={
                   i === 0
                     ? "border-b-2 border-primary-container py-1 font-bold text-neutral-900 transition-all"
-                    : "py-1 text-neutral-500 transition-colors hover:text-primary-container"
+                    : "py-1 text-neutral-500 transition-colors hover:text-neutral-900"
                 }
               >
                 {link.label}
