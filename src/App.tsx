@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { HowItWorks } from "./components/HowItWorks";
+import { PromoStrip } from "./components/PromoStrip";
 import { RevealOnScroll } from "./components/layout/RevealOnScroll";
 import { NoHiddenBenefitsSection } from "./components/NoHiddenBenefitsSection";
 
@@ -13,6 +14,7 @@ function App() {
     <>
       <Header />
       <main className="bg-white pt-20">
+        <PromoStrip />
         <RevealOnScroll>
           <Hero />
         </RevealOnScroll>

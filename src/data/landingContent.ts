@@ -106,23 +106,28 @@ export const howItWorks = {
   steps: [
     {
       step: "01",
-      title: "Choose a car",
-      body: "Select from our premium fleet of brand new vehicles.",
+      title: "Order a car online",
+      body: "Choose your model and complete the order fully online in minutes.",
     },
     {
       step: "02",
-      title: "Customize extras",
-      body: "Pick your mileage package and insurance level.",
+      title: "Delivery even tomorrow",
+      body: "Fast home delivery with next-day options where available.",
     },
     {
       step: "03",
-      title: "Online check",
-      body: "Quick and secure credit check. Fully digital.",
+      title: "Activate the mobile app and enjoy your Wheely",
+      body: "Unlock all subscription details and manage your car from your phone.",
     },
     {
       step: "04",
-      title: "Home delivery",
-      body: "We bring your car to your doorstep, ready to drive.",
+      title: "Service and inspection at partner stores",
+      body: "Maintenance and required inspections are handled at trusted partner locations.",
+    },
+    {
+      step: "05",
+      title: "Return, exchange, or redeem",
+      body: "At the end of your term, return it, switch to another car, or redeem it.",
     },
   ],
 };
