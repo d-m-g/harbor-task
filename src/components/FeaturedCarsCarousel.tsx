@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { featuredCars } from "../data/landingContent";
+import { publicUrl } from "../utils/publicUrl";
 import { MaterialIcon } from "./ui/MaterialIcon";
 
 export function FeaturedCarsCarousel() {
@@ -16,7 +17,7 @@ export function FeaturedCarsCarousel() {
   };
 
   return (
-    <section className="bg-surface px-4 py-14 sm:px-6 lg:px-8">
+    <section id="cars" className="bg-surface px-4 py-14 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mb-6 flex items-end justify-between gap-4">
           <div>
@@ -54,12 +55,12 @@ export function FeaturedCarsCarousel() {
           {featuredCars.items.map((car) => (
             <article
               key={car.name}
-              className="group relative min-w-[84%] snap-start overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition-all hover:shadow-lg sm:min-w-[55%] lg:min-w-[32%]"
+              className="group relative min-w-[78%] snap-start overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition-all hover:shadow-lg sm:min-w-[48%] lg:min-w-[29%]"
             >
               <img
-                src={car.image}
+                src={publicUrl(car.image)}
                 alt={car.name}
-                className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                className="h-44 w-full scale-105 object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
               />
               {car.specialOffer ? (
@@ -67,10 +68,15 @@ export function FeaturedCarsCarousel() {
                   Special Offer
                 </span>
               ) : null}
-              <div className="space-y-2 p-5">
-                <h3 className="text-xl font-black text-on-surface">{car.name}</h3>
-                <p className="text-sm font-bold text-on-surface-variant">
-                  {car.priceLabel}
+              <div className="flex items-start justify-between gap-4 p-4">
+                <div className="space-y-1">
+                  <h3 className="text-lg font-black text-on-surface">{car.name}</h3>
+                  <p className="text-sm font-bold text-on-surface-variant">
+                    {car.priceLabel}
+                  </p>
+                </div>
+                <p className="max-w-[46%] text-right text-[0.7rem] font-medium leading-relaxed text-neutral-400">
+                  {car.year} | {car.gearbox} | {car.mileage} | {car.fuel}
                 </p>
               </div>
             </article>

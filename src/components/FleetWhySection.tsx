@@ -5,7 +5,7 @@ import { MaterialIcon } from "./ui/MaterialIcon";
 export function FleetWhySection() {
   return (
     <section
-      id="cars"
+      id="why-wheely"
       className="bg-wheely-support px-4 py-16 text-neutral-100 sm:px-6 lg:py-24 lg:px-8"
     >
       <div className="mx-auto max-w-7xl">
