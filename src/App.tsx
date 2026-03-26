@@ -1,5 +1,6 @@
 import { AddOnsSection } from "./components/AddOnsSection";
 import { CtaBanner } from "./components/CtaBanner";
+import { FeaturedCarsCarousel } from "./components/FeaturedCarsCarousel";
 import { FleetWhySection } from "./components/FleetWhySection";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -17,6 +18,9 @@ function App() {
         <PromoStrip />
         <RevealOnScroll>
           <Hero />
+        </RevealOnScroll>
+        <RevealOnScroll>
+          <FeaturedCarsCarousel />
         </RevealOnScroll>
         <RevealOnScroll>
           <FleetWhySection />

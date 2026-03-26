@@ -3,7 +3,7 @@ export const stitchImages = {
   heroCar:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuCtYsAwgyenmyGx1KGU8ineuo7DuFo3Lno0M_EDNTr41bc6wQYFbV3y-uW-kfoH6i0w8N7pLbOGwnu2PskU_l2kBNOcpOguDRsPEeGK9cfh4aWSqRgiu3vy6P9pOANO4I371qVmbgh8pE--BxCkTwAZEKGd5w4j-IO1ukzb-1pYiJAwuJALj68oAmB0kQygch_9y0LEMhyRAc-HWuwwoljEtveMEQ7Tf69emSvlMyhnKv9duoUc8hNa12xsdsIrh9RnZO-jXEkvD6Tw",
   addOnInterior:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuDGgqNj2DL9SI3G2ujDJYyuX7KDuSLQEkmqyZwaF6SeKR32zPLuVJNfHLL0tJSplnS49KMr66Wn4MXxi47OxknYWDu4ow9E4_dw_0MP9uVOX1Rq6I2R7sFT-nuvGIZ1pL6YOSyeL6qwPknRld4KbYQl11psQkUYpbJ_bn60LIkiCdr_MNw9JQcDgf5s_YyBTMukj3wDATARYqtHRaGGBdjM0Q5FReRvBq7QrVMwcmxkTCuJoWGB5I9kPCMNldt0qzcPxmkjcZ3G0dm_",
+    "/excited_indian_man_singing_enjoying_while_driving_car_695242_16304.avif",
 } as const;
 
 export const navLinks = [
@@ -21,6 +21,47 @@ export const hero = {
   primaryCta: "Browse Cars",
   secondaryCta: "How it works",
 };
+
+export const featuredCars = {
+  title: "Featured Cars",
+  subtitle: "Fresh arrivals you can subscribe to right now.",
+  items: [
+    {
+      name: "BMW 3 Series",
+      priceLabel: "From 529 €/month",
+      image:
+        "https://placehold.co/960x560/e9e9e9/1c1b1b?text=BMW+3+Series",
+      specialOffer: true,
+    },
+    {
+      name: "Mercedes C-Class",
+      priceLabel: "From 579 €/month",
+      image:
+        "https://placehold.co/960x560/efefef/1c1b1b?text=Mercedes+C-Class",
+      specialOffer: true,
+    },
+    {
+      name: "Audi A4",
+      priceLabel: "From 549 €/month",
+      image: "https://placehold.co/960x560/f3f3f3/1c1b1b?text=Audi+A4",
+      specialOffer: false,
+    },
+    {
+      name: "Skoda Kodiaq",
+      priceLabel: "From 499 €/month",
+      image:
+        "https://placehold.co/960x560/ededed/1c1b1b?text=Skoda+Kodiaq",
+      specialOffer: false,
+    },
+    {
+      name: "Volkswagen Tiguan",
+      priceLabel: "From 519 €/month",
+      image:
+        "https://placehold.co/960x560/e7e7e7/1c1b1b?text=Volkswagen+Tiguan",
+      specialOffer: false,
+    },
+  ],
+} as const;
 
 export const brands = {
   title: "Our Fleet Brands",
@@ -134,23 +175,38 @@ export const howItWorks = {
 
 export const addOns = {
   title: "Customize Your Ride",
-  intro:
-    "Tailor your subscription to fit your lifestyle perfectly. Add protection or flexibility with a single click.",
+  intro: "Complete your order with additional services",
   items: [
     {
-      icon: "shield" as const,
-      title: "Insurance Plus",
-      body: "Full coverage with zero deductible options.",
+      icon: "local_shipping" as const,
+      title: "Home Delivery",
+      body: "Delivered to your door, even tomorrow where available.",
+      priceLabel: "0 € anytime",
       accent: true,
     },
     {
-      icon: "add_road" as const,
-      title: "Unlimited Mileage",
-      body: "For the wanderers. No caps on your adventures.",
+      icon: "health_and_safety" as const,
+      title: "Mobility Safety",
+      body: "Extra protection for safer day-to-day driving.",
+      priceLabel: "10 €/month",
+      accent: false,
+    },
+    {
+      icon: "tire_repair" as const,
+      title: "Tire Storage, Replacement and Security",
+      body: "Seasonal tire storage, replacement support, and added security.",
+      priceLabel: "26 €/month",
+      accent: false,
+    },
+    {
+      icon: "verified_user" as const,
+      title: "Insurance",
+      body: "Insurance options tailored to your selected vehicle.",
+      priceLabel: "Price per car",
       accent: false,
     },
   ],
-  availabilityBadge: "Available Now",
+  availabilityBadge: "Pick only what you need",
 };
 
 export const ctaBanner = {
