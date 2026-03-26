@@ -15,9 +15,9 @@ export function Header() {
             <img
               src={publicUrl("logos/wheely.png")}
               alt="Wheely"
-              className="h-8 w-auto object-contain sm:h-9"
-              width={160}
-              height={40}
+              className="h-10 w-auto object-contain sm:h-12"
+              width={220}
+              height={56}
             />
           </a>
           <div className="hidden gap-6 md:flex lg:gap-8">
